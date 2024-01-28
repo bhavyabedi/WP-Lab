@@ -1,0 +1,25 @@
+<html>
+    <head><title>Moving Image</title>
+        <script>
+            var x=5;
+            var y=5
+            var final_x=300
+            var final_y=300;
+            function moveImage(){
+                if(x<final_x)
+                    x+=10;
+                if(y<final_y)
+                    y+=10;
+                document.getElementById('imagee').style.top=y+"px";
+                document.getElementById('imagee').style.left=x+"px";
+                if((x<final_x) && (y<final_y))
+                window.setTimeout("moveImage()",100);
+            }
+        </script>
+    </head>
+    <body onload="moveImage()">
+        <div id="imagee" style="position: absolute;">
+            <img src="Luffy-Kinemon.png" width="100"/>
+        </div>
+        </body>
+</html>
