@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Redundancy</title>
+        <title>Prime Numbers</title>
     </head>
     <body>
         <form method='post'>

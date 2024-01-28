@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Redundancy</title>
+        <title>Database Read/Write</title>
     </head>
     <body>
         <?php
@@ -11,7 +11,7 @@
             $conn=new mysqli($servername,$password,$username,$dbname);
             if($conn->connection_error)
             die('Connection Failed: '.$conn->connection_error);
-            $add_sql="INSERT INTO StudentInfo(name,age,grade) VALUES ('Shiva',32,'A+)";
+            $add_sql="INSERT INTO StudentInfo(name,age,grade) VALUES ('Shiva',32,'A+')";
             if($conn->query($add_sql)===TRUE)
                 echo "Added";
             else    
@@ -20,12 +20,12 @@
             if($conn->query($update_sql)===TRUE)
                 echo "Added";
             else    
-                echo "Error adding query ".$conn->error."<br>";
+                echo "Error updating query ".$conn->error."<br>";
             $delete_sql="DELETE FROM StudentInfo where name='Shiva'";
             if($conn->query($delete_sql)===TRUE)
                 echo "Added";
             else    
-                echo "Error adding query ".$conn->error."<br>";
+                echo "Error deleting query ".$conn->error."<br>";
             $conn->close();          
         ?> 
     </body>

@@ -29,8 +29,7 @@ try {
 
 try {
     // Example 2: Checking date format
-    // $dateString = '2024-01-27';
-    $dateString='27-01-2024';
+    $dateString = '2024-01-27';
     $dateObject = validateDateFormat($dateString);
     echo "Valid date: " . $dateObject->format('Y-m-d') . "<br/>";
 
